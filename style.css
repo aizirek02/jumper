@@ -1,0 +1,47 @@
+.game {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#character {
+    width: 20px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+    top: 150px;
+    left: 15px;
+}
+
+#block {
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 130px;
+    left: 480px;
+}
+
+#inputText {
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    background-color: greenyellow;
+    font-size: large;
+    position: relative;
+    left: 460px;
+    top: -70px;
+
+}
+
+#restart {
+    width: 70px;
+    height: 25px;
+    text-align: center;
+    font-size: large;
+    position: relative;
+    left: 230px;
+    top: 110px;
+
+}

@@ -27,6 +27,18 @@ function jump() {
     });
 }
 
+function walkRight() {
+    var currentPosition = getCssVal(character, "left");
+    var newValue = parseInt(currentPosition) + 10;
+    character.style.left = newValue + "px";
+}
+
+function walkLeft() {
+    var currentPosition = getCssVal(character, "left");
+    var newValue = parseInt(currentPosition) - 10;
+    character.style.left = newValue + "px";
+}
+
 
 function attack() {
     return [
@@ -74,3 +86,24 @@ var loop = setInterval(() => {
 function getCssVal(elem, property) {
     return window.getComputedStyle(elem).getPropertyValue(property);
 }
+
+document.addEventListener("keyup", event => {
+    if (event.keyCode === 38) {
+        jump();
+        return;
+    }
+    if (event.keyCode === 13) {
+        refresh();
+    }
+
+});
+document.addEventListener("keydown", event => {
+    if (event.keyCode === 39) {
+        walkRight();
+    }
+    if (event.keyCode === 37) {
+        walkLeft();
+    }
+
+
+});
